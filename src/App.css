@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
+.form-container {
+  background-color: rgba(71, 157, 175, 0.9);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  background-color: #479daf;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  font-size: 1rem;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+
+form input::placeholder {
+  color: #e6f8fb;
+  /* slightly lighter for placeholders */
+}
+
+
+.dollar-input-wrapper {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.dollar-input-wrapper input {
+  padding-left: 24px;
+}
+
+.dollar-prefix {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  font-size: 1rem;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  background: #479daf;
+  /* Teal default background */
+  color: #fff;
+  /* White default text */
+  border: 1px solid #ffffff;
+  /* Always white border */
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out, border 0.2s ease-in-out;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button:hover {
+  background: #23527c;
+  /* Darker teal on hover */
+  color: #479daf;
+  /* Teal text on hover */
+  border: none;
+}
+
+h2 {
   color: white;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.error {
+  color: #ffdddd;
+  font-size: 0.9rem;
+  margin-top: -12px;
+  margin-bottom: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.success-message {
+  color: #dfffe2;
+  background: #2a662a;
+  padding: 10px 16px;
+  border-radius: 8px;
+  margin-top: 16px;
+  text-align: center;
+  font-weight: 500;
 }
